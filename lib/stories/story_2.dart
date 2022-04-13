@@ -7,6 +7,9 @@ class MyStory2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.yellow[200],
+      body: Center(
+        child: Text('Insert Text here'),
+      ),
     );
   }
 }

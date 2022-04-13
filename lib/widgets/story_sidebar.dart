@@ -86,16 +86,15 @@ class StorySideBar extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                                Icons.sentiment_very_dissatisfied_outlined)),
                         Icon(
                           Icons.sentiment_very_dissatisfied_outlined,
                         ),
                         Icon(
                           Icons.sentiment_very_dissatisfied_outlined,
                         ),
+                        Icon(
+                            // Icons.sentiment_very_dissatisfied_outlined,
+                            Icons.sentiment_very_dissatisfied_outlined),
                         Icon(
                           Icons.sentiment_very_dissatisfied_outlined,
                         ),

@@ -86,21 +86,21 @@ class _StoryPageState extends State<StoryPage> {
     }
     // next story
     // user taps on second half of screen
-    // else {
-    //   setState(() {
-    //     // if there are more stories left
-    //     if (currentStoryIndex < myStories.length - 1) {
-    //       // finish current story
-    //       percentWatched[currentStoryIndex] = 1;
-    //       // move to next story
-    //       currentStoryIndex++;
-    //     }
-    //     // if user is on the last story, finish this story
-    //     else {
-    //       percentWatched[currentStoryIndex] = 1;
-    //     }
-    //   });
-    // }
+    else {
+      setState(() {
+        // if there are more stories left
+        if (currentStoryIndex < myStories.length - 1) {
+          // finish current story
+          percentWatched[currentStoryIndex] = 1;
+          // move to next story
+          currentStoryIndex++;
+        }
+        // if user is on the last story, finish this story
+        else {
+          percentWatched[currentStoryIndex] = 1;
+        }
+      });
+    }
   }
 
   @override

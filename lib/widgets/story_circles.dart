@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whynot/constants.dart';
 import 'package:whynot/data/story_data.dart';
 
 class StoryCircle extends StatelessWidget {
@@ -23,8 +24,10 @@ class StoryCircle extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color(0xFF9B2282),
-                  Color(0xFFEEA863),
+                  // Color(0xFF9B2282),
+                  // Color(0xFFEEA863),
+                  AppColors.kAccentColor,
+                  Colors.white
                 ],
               ),
             ),
@@ -34,14 +37,14 @@ class StoryCircle extends StatelessWidget {
                 height: 65,
                 width: 65,
                 decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 2,
-                  ),
+                  // border: Border.all(
+                  //   color: Colors.black,
+                  //   width: 2,
+                  // ),
                   shape: BoxShape.circle,
                   // color: Colors.blue,
                   image: DecorationImage(
-                    image: NetworkImage(stories[0]['img']),
+                    image: AssetImage('yeet.jpg'),
                     fit: BoxFit.cover,
                   ),
                 ),

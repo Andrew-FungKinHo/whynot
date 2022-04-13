@@ -5,22 +5,8 @@ String name = "panhchaneath_ung";
 
 // stories
 List stories = [
-  {
-    "id": 1,
-    "img":
-        "https://avatars.githubusercontent.com/u/58603176?s=400&u=d619d48544afb3ad4c379cd3b092c0cb6f02910b&v=4",
-    "name": "HOT"
-  },
-  {
-    "id": 2,
-    "img":
-        "https://avatars.githubusercontent.com/u/58603176?s=400&u=d619d48544afb3ad4c379cd3b092c0cb6f02910b&v=4",
-    "name": "HKUST"
-  },
-  {
-    "id": 3,
-    "img":
-        "https://avatars.githubusercontent.com/u/58603176?s=400&u=d619d48544afb3ad4c379cd3b092c0cb6f02910b&v=4",
-    "name": "LIFE"
-  },
+  {"id": 1, "img": "assets/images/hot(new).png", "name": "HOT"},
+  {"id": 2, "img": "assets/images/hkust.png", "name": "HKUST"},
+  {"id": 3, "img": "assets/images/life.png", "name": "LIFE"},
+  {"id": 4, "img": "assets/images/single.png", "name": "SINGLE"},
 ];

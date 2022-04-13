@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 
 import 'package:timelines/timelines.dart';
 import 'package:whynot/constants.dart';
+import 'package:whynot/pages/homepage.dart';
 import 'package:whynot/widgets/advice_tiles.dart';
+import 'package:whynot/widgets/calendar.dart';
 
 const kTileHeight = 50.0;
 
@@ -49,7 +51,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                 thickness: 5.0,
               ),
             ),
-            padding: EdgeInsets.only(bottom: 650),
+            padding: EdgeInsets.only(bottom: 600),
             builder: TimelineTileBuilder.connected(
               connectionDirection: ConnectionDirection.before,
               itemExtentBuilder: (_, __) =>
@@ -229,7 +231,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                             child: Text(
                               'Workplace',
                               style: TextStyle(
-                                color: Colors.black,
+                                color: AppColors.kAccentColor,
                               ),
                             ),
                             onPressed: () {
@@ -253,7 +255,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                             child: Text(
                               'Feb 2022',
                               style: TextStyle(
-                                color: Colors.black,
+                                color: AppColors.kAccentColor,
                               ),
                             ),
                             onPressed: () {
@@ -277,7 +279,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                             child: Text(
                               'Job Dismissal',
                               style: TextStyle(
-                                color: Colors.black,
+                                color: AppColors.kAccentColor,
                               ),
                             ),
                             onPressed: () {
@@ -300,13 +302,32 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                           ElevatedButton(
                             child: Text(
                               'Covid-19',
-                              style: TextStyle(
-                                color: Colors.black,
-                              ),
+                              style: TextStyle(color: AppColors.kAccentColor),
                             ),
                             onPressed: () {
                               print('Pressed');
                             },
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white,
+                              shape: new RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(10.0),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Your Emotions:'),
+                          SizedBox(width: 10),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              '😤 Frustrated',
+                              style: TextStyle(
+                                  fontSize: 25, color: AppColors.kAccentColor),
+                            ),
                             style: ElevatedButton.styleFrom(
                               primary: Colors.white,
                               shape: new RoundedRectangleBorder(
@@ -339,23 +360,17 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "We Are In This Together",
+                                "You Are Courageous",
                                 style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 30),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 30,
+                                    color: AppColors.kAccentColor),
                               )
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [Text("Below are the")],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [Text("Most Common Approaches")],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [Text("for your problem:")],
+                            children: [Text("And Follow-up is Key to Success")],
                           ),
                           SizedBox(
                             height: 10,
@@ -364,15 +379,247 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                         ],
                       ),
                     )
-                  : Container()
+                  : _processIndex == 3
+                      ? Padding(
+                          padding: const EdgeInsets.only(top: 200.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [Text('On Instrumental Complaint')],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("'I Got Fired Becaused Of Covid'")
+                                ],
+                              ),
+                              SizedBox(
+                                height: 75,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "We Are In This Together",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30,
+                                        color: AppColors.kAccentColor),
+                                  )
+                                ],
+                              ),
+
+                              SizedBox(
+                                height: 10,
+                              ),
+
+                              // MyStatefulWidget(),
+                            ],
+                          ))
+                      : Padding(
+                          padding: const EdgeInsets.only(top: 150.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [Text('On Instrumental Complaint')],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("'I Got Fired Becaused Of Covid'")
+                                ],
+                              ),
+                              SizedBox(
+                                height: 75,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Congratulations!",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 25,
+                                        color: AppColors.kAccentColor),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "We Are So Proud Of You.",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 25,
+                                        color: AppColors.kAccentColor),
+                                  ),
+                                ],
+                              ),
+
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "How Are You Feeling Now?",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15,
+                                        color: Colors.black),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  OutlinedButton(
+                                    onPressed: () {},
+                                    child: const Text(
+                                      'Happiness',
+                                      style: TextStyle(
+                                          fontSize: 11, color: Colors.amber),
+                                    ),
+                                    style: OutlinedButton.styleFrom(
+                                      fixedSize: const Size(100, 100),
+                                      shape: const CircleBorder(),
+                                      side: BorderSide(
+                                        width: 2.0,
+                                        color: Colors.amber,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  OutlinedButton(
+                                    onPressed: () {},
+                                    child: const Text(
+                                      'Disgust',
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          color:
+                                              Color.fromRGBO(117, 176, 156, 1)),
+                                    ),
+                                    style: OutlinedButton.styleFrom(
+                                      fixedSize: const Size(100, 100),
+                                      shape: const CircleBorder(),
+                                      side: BorderSide(
+                                        width: 2.0,
+                                        color: Color.fromRGBO(117, 176, 156, 1),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  OutlinedButton(
+                                    onPressed: () {},
+                                    child: const Text(
+                                      'Sadness',
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          color:
+                                              Color.fromRGBO(193, 150, 251, 1)),
+                                    ),
+                                    style: OutlinedButton.styleFrom(
+                                      fixedSize: const Size(100, 100),
+                                      shape: const CircleBorder(),
+                                      side: BorderSide(
+                                        width: 2.0,
+                                        color: Color.fromRGBO(193, 150, 251, 1),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  OutlinedButton(
+                                    onPressed: () {},
+                                    child: const Text(
+                                      'Anger',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          color:
+                                              Color.fromRGBO(249, 89, 124, 1)),
+                                    ),
+                                    style: OutlinedButton.styleFrom(
+                                      fixedSize: const Size(100, 100),
+                                      shape: const CircleBorder(),
+                                      side: BorderSide(
+                                        width: 2.0,
+                                        color: Color.fromRGBO(249, 89, 124, 1),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  OutlinedButton(
+                                    onPressed: () {},
+                                    child: const Text(
+                                      'Fear',
+                                      style: TextStyle(
+                                          fontSize: 25, color: Colors.black),
+                                    ),
+                                    style: OutlinedButton.styleFrom(
+                                      fixedSize: const Size(100, 100),
+                                      shape: const CircleBorder(),
+                                      side: BorderSide(
+                                          width: 2.0, color: Colors.black),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  OutlinedButton(
+                                    onPressed: () {},
+                                    child: const Text(
+                                      'Surprise',
+                                      style: TextStyle(fontSize: 16),
+                                    ),
+                                    style: OutlinedButton.styleFrom(
+                                      fixedSize: const Size(100, 100),
+                                      shape: const CircleBorder(),
+                                      side: BorderSide(
+                                          width: 2.0, color: Colors.blue),
+                                    ),
+                                  )
+                                ],
+                              )
+
+                              // MyStatefulWidget(),
+                            ],
+                          ),
+                        )
         ],
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.chevron_right),
         onPressed: () {
-          setState(() {
-            _processIndex = (_processIndex + 1) % _processes.length;
-          });
+          if (_processIndex != 4) {
+            setState(() {
+              _processIndex = (_processIndex + 1);
+            });
+          } else {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CalendarView(),
+              ),
+            );
+          }
         },
         backgroundColor: completeColor,
       ),
