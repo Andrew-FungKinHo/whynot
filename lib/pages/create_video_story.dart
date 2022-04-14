@@ -13,7 +13,7 @@ class CreateVideoStory extends StatelessWidget {
           appBar: AppBar(
             title: Text('Create With'),
             centerTitle: true,
-            backgroundColor: Colors.black,
+            backgroundColor: AppColors.kPrimaryColor,
             bottom: TabBar(
               indicatorColor: Colors.white,
               tabs: [
@@ -22,8 +22,9 @@ class CreateVideoStory extends StatelessWidget {
                 Tab(text: 'Audio'),
               ],
             ),
+            elevation: 0,
           ),
-          backgroundColor: Colors.black,
+          backgroundColor: AppColors.kPrimaryColor,
           body: TabBarView(
             children: [
               Center(
@@ -72,8 +73,8 @@ class CreateVideoStory extends StatelessWidget {
                         child: PlayButton(
                           pauseIcon:
                               Icon(Icons.pause, color: Colors.black, size: 50),
-                          playIcon: Icon(Icons.play_arrow,
-                              color: Colors.black, size: 50),
+                          playIcon: Icon(Icons.whatshot_rounded,
+                              color: AppColors.kAccentColor, size: 50),
                           onPressed: () {},
                         ),
                       ),
@@ -135,7 +136,7 @@ class CreateVideoStory extends StatelessWidget {
                               ),
                             ),
                           ]),
-              
+
                       // Text(
                       //   'Tap to record your voice',
                       //   style: TextStyle(fontSize: 15, color: Colors.white),

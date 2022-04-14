@@ -20,6 +20,149 @@ class _CalendarViewState extends State<CalendarView> {
   late bool isExpanded = false;
 
   final Map<DateTime, List<CleanCalendarEvent>> events = {
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day - 13): [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day - 12): [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day - 11): [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day - 10): [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day - 9):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day - 8):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day - 7):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day - 6):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day - 5):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day - 4):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day - 3):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day - 2):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day - 1):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
     DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day): [
       CleanCalendarEvent('Growths of the Day',
           startTime: DateTime(DateTime.now().year, DateTime.now().month,
@@ -52,8 +195,8 @@ class _CalendarViewState extends State<CalendarView> {
           description: 'Send your thanksgiving to ones who support you!',
           color: Colors.white),
     ],
-    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 2):
-        [
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day + 14): [
       CleanCalendarEvent('Event B',
           startTime: DateTime(DateTime.now().year, DateTime.now().month,
               DateTime.now().day + 2, 10, 0),
@@ -68,8 +211,24 @@ class _CalendarViewState extends State<CalendarView> {
           color: Colors.pink,
           isDone: true),
     ],
-    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 3):
-        [
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day + 15): [
+      CleanCalendarEvent('Event B',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day + 2, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day + 2, 12, 0),
+          color: Colors.orange),
+      CleanCalendarEvent('Event C',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day + 2, 14, 30),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day + 2, 17, 0),
+          color: Colors.pink,
+          isDone: true),
+    ],
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day + 16): [
       CleanCalendarEvent('Event B',
           startTime: DateTime(DateTime.now().year, DateTime.now().month,
               DateTime.now().day + 2, 10, 0),
@@ -112,6 +271,149 @@ class _CalendarViewState extends State<CalendarView> {
           endTime: DateTime(DateTime.now().year, DateTime.now().month,
               DateTime.now().day + 2, 17, 0),
           color: Colors.brown),
+    ],
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day + 13): [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day + 12): [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day + 11): [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(
+        DateTime.now().year, DateTime.now().month, DateTime.now().day + 10): [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 9):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 8):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 7):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 6):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 5):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 4):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 3):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 2):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: true),
+    ],
+    DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 1):
+        [
+      CleanCalendarEvent('Growths of the Day',
+          startTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 10, 0),
+          endTime: DateTime(DateTime.now().year, DateTime.now().month,
+              DateTime.now().day, 12, 0),
+          // description: 'A special event',
+          color: AppColors.kAccentColor,
+          isDone: false),
     ],
   };
   void _handleData(date) {

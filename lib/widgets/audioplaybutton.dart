@@ -15,7 +15,8 @@ class AudioPlayer extends StatelessWidget {
           width: 200,
           child: PlayButton(
             pauseIcon: Icon(Icons.pause, color: Colors.black, size: 90),
-            playIcon: Icon(Icons.play_arrow, color: Colors.black, size: 90),
+            playIcon:
+                Icon(Icons.whatshot, color: AppColors.kAccentColor, size: 90),
             onPressed: () {},
           ),
         ),
@@ -33,7 +34,7 @@ class PlayButton extends StatefulWidget {
   PlayButton({
     required this.onPressed,
     this.initialIsPlaying = false,
-    this.playIcon = const Icon(Icons.play_arrow),
+    this.playIcon = const Icon(Icons.whatshot, color: AppColors.kAccentColor),
     this.pauseIcon = const Icon(Icons.pause),
   }) : assert(onPressed != null);
 

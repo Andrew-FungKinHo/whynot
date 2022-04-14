@@ -26,48 +26,54 @@ class _AnonymousOptionState extends State<AnonymousOption> {
               ), //BoxDecoration
 
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    padding: const EdgeInsets.symmetric(vertical: 20.0),
                     child: Text(
                       'Do You Wish To Stay Anonymous?',
                       style:
-                          TextStyle(color: AppColors.strongBlue, fontSize: 20),
+                          TextStyle(color: AppColors.strongBlue, fontSize: 18),
                     ),
                   ),
-                  CheckboxListTile(
-                    title: const Text('Yes, please'),
-                    autofocus: false,
-                    activeColor: Colors.green,
-                    checkColor: Colors.white,
-                    selected: _value,
-                    value: _value,
-                    onChanged: (bool? value) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CreateVideoStory(),
-                        ),
-                      );
-                    },
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                    child: CheckboxListTile(
+                      title: const Text('Yes, please'),
+                      autofocus: false,
+                      activeColor: Colors.green,
+                      checkColor: Colors.white,
+                      selected: _value,
+                      value: _value,
+                      onChanged: (bool? value) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CreateVideoStory(),
+                          ),
+                        );
+                      },
+                    ),
                   ),
-                  CheckboxListTile(
-                    title: const Text('No, its fine'),
-                    autofocus: false,
-                    activeColor: Colors.green,
-                    checkColor: Colors.white,
-                    selected: _value,
-                    value: _value,
-                    onChanged: (bool? value) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CreateVideoStory(),
-                        ),
-                      );
-                    },
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                    child: CheckboxListTile(
+                      title: const Text('No, its fine'),
+                      autofocus: false,
+                      activeColor: Colors.green,
+                      checkColor: Colors.white,
+                      selected: _value,
+                      value: _value,
+                      onChanged: (bool? value) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CreateVideoStory(),
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ],
               ), //CheckboxListTile

@@ -2,6 +2,38 @@ import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:marquee/marquee.dart';
+import "dart:math";
+
+var list = [
+  "andrewIsDepressed · Follow",
+  "theoJames · Follow",
+  "rogerMatthias · Follow",
+  "Lilly Reynolds · Follow",
+  "Rogerphillips · Follow"
+];
+
+var nameList = [
+  "Theo",
+  "Sam",
+  "Kyle",
+  "Jaman",
+  "Nelson",
+];
+
+var titleList = [
+  "I mean, what is this kind of customer service?",
+  "I can't believe it. I had the most terrible day at work",
+  "I can't be the only one who has a problem with this",
+  "What on earth is this?",
+];
+
+var websiteString = [
+  "https://picsum.photos/199",
+  "https://picsum.photos/200",
+  "https://picsum.photos/201",
+];
+// generates a new Random object
+final _random = new Random();
 
 class StoryDetails extends StatelessWidget {
   const StoryDetails({Key? key}) : super(key: key);
@@ -17,14 +49,14 @@ class StoryDetails extends StatelessWidget {
             minLeadingWidth: 0,
             horizontalTitleGap: 12,
             title: Text(
-              "nelsonIsDepressed · Follow",
+              list[_random.nextInt(list.length)],
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
             ),
             leading: CircleAvatar(
               radius: 14,
               backgroundImage: NetworkImage(
-                  "https://avatars.githubusercontent.com/u/58603176?s=400&u=d619d48544afb3ad4c379cd3b092c0cb6f02910b&v=4"),
+                  websiteString[_random.nextInt(websiteString.length)]),
             ),
           ),
           Padding(
@@ -53,8 +85,7 @@ class StoryDetails extends StatelessWidget {
                   height: 20,
                   width: 125,
                   child: Marquee(
-                    text:
-                        "I can't believe it. I had the most terrible day at work",
+                    text: titleList[_random.nextInt(titleList.length)],
                     scrollAxis: Axis.horizontal,
                     velocity: 15,
                     style: TextStyle(
@@ -71,7 +102,7 @@ class StoryDetails extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    "narration by Nelson",
+                    "narration by ${nameList[_random.nextInt(nameList.length)]}",
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(

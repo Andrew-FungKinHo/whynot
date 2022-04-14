@@ -46,6 +46,138 @@ class _HomePageState extends State<HomePage> {
       });
   }
 
+  void showCustomDialog(BuildContext context) {
+    showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (BuildContext cxt) {
+        return Align(
+          alignment: Alignment.center,
+          child: Padding(
+            padding: EdgeInsets.all(16),
+            child: Material(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(16),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Icon(Icons.cancel_rounded),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.sentiment_very_dissatisfied_outlined,
+                          color: Colors.red.shade200,
+                        ),
+                        Icon(
+                          Icons.sentiment_very_dissatisfied_outlined,
+                          color: Colors.red.shade300,
+                        ),
+                        Icon(
+                          Icons.sentiment_very_dissatisfied_outlined,
+                          color: Colors.red.shade400,
+                        ),
+                        Icon(
+                          Icons.sentiment_very_dissatisfied_outlined,
+                          color: Colors.red.shade500,
+                        ),
+                        Icon(
+                          Icons.sentiment_very_dissatisfied_outlined,
+                          color: Colors.red.shade600,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text(
+                            '80% Users Says 爆了',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text(
+                            'Nei Leh?',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.sentiment_very_dissatisfied_outlined,
+                          size: 60,
+                          color: AppColors.kAccentColor,
+                        ),
+                        Icon(
+                          Icons.sentiment_very_dissatisfied_outlined,
+                          size: 60,
+                          color: AppColors.kAccentColor,
+                        ),
+                        Icon(
+                          // Icons.sentiment_very_dissatisfied_outlined,
+                          Icons.sentiment_very_dissatisfied_outlined, size: 60,
+                          color: AppColors.kAccentColor,
+                        ),
+                        Icon(
+                          Icons.sentiment_very_dissatisfied_outlined,
+                          color: AppColors.kAccentColor,
+                          size: 60,
+                        ),
+                        Icon(
+                          Icons.sentiment_very_dissatisfied_outlined,
+                          size: 60,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text(
+                            'Ok La    咁都得？    嬲咗    係我就唔忍   爆了',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -287,7 +419,7 @@ class _HomePageState extends State<HomePage> {
                       EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                   child: Container(
                     width: double.infinity,
-                    height: 332.0,
+                    height: 351.0,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(25.0),
@@ -362,58 +494,135 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10.0),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    Row(
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 10.0),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: <Widget>[
-                                        Row(
-                                          children: <Widget>[
-                                            Text('#Finance'),
-                                            IconButton(
-                                              icon: Icon(Icons.favorite_border),
-                                              iconSize: 30.0,
-                                              onPressed: () =>
-                                                  print('Like post'),
-                                            ),
-                                            Text(
-                                              '2,515',
-                                              style: TextStyle(
-                                                fontSize: 14.0,
-                                                fontWeight: FontWeight.w600,
-                                              ),
-                                            ),
-                                          ],
+                                        // Row(
+                                        //   children: <Widget>[
+                                        //     Row(
+                                        //       children: <Widget>[
+                                        //         Text('#Finance'),
+                                        //         IconButton(
+                                        //           icon: Icon(Icons.favorite_border),
+                                        //           iconSize: 30.0,
+                                        //           onPressed: () =>
+                                        //               print('Like post'),
+                                        //         ),
+                                        //         Text(
+                                        //           '2,515',
+                                        //           style: TextStyle(
+                                        //             fontSize: 14.0,
+                                        //             fontWeight: FontWeight.w600,
+                                        //           ),
+                                        //         ),
+                                        //       ],
+                                        //     ),
+                                        //     SizedBox(width: 20.0),
+                                        //     Row(
+                                        //       children: <Widget>[
+                                        //         IconButton(
+                                        //           icon: Icon(Icons.chat),
+                                        //           iconSize: 30.0,
+                                        //           onPressed: () {},
+                                        //         ),
+                                        //         Text(
+                                        //           '350',
+                                        //           style: TextStyle(
+                                        //             fontSize: 14.0,
+                                        //             fontWeight: FontWeight.w600,
+                                        //           ),
+                                        //         ),
+                                        //       ],
+                                        //     ),
+                                        //   ],
+                                        // ),
+
+                                        Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Text(
+                                            '#Finance',
+                                            style: TextStyle(fontSize: 20),
+                                          ),
                                         ),
-                                        SizedBox(width: 20.0),
-                                        Row(
-                                          children: <Widget>[
-                                            IconButton(
-                                              icon: Icon(Icons.chat),
-                                              iconSize: 30.0,
-                                              onPressed: () {},
-                                            ),
-                                            Text(
-                                              '350',
-                                              style: TextStyle(
-                                                fontSize: 14.0,
-                                                fontWeight: FontWeight.w600,
+                                        InkWell(
+                                          onTap: () {
+                                            showCustomDialog(context);
+                                          },
+                                          child: Container(
+                                            child: Row(children: [
+                                              Icon(
+                                                Icons
+                                                    .sentiment_very_dissatisfied_rounded,
+                                                size: 35,
+                                                color: AppColors.kAccentColor,
                                               ),
-                                            ),
-                                          ],
+                                              Icon(
+                                                Icons
+                                                    .sentiment_very_dissatisfied_rounded,
+                                                size: 35,
+                                                color: AppColors.kAccentColor,
+                                              ),
+                                              Icon(
+                                                Icons
+                                                    .sentiment_very_dissatisfied_rounded,
+                                                color: AppColors.kAccentColor,
+                                                size: 35,
+                                              ),
+                                              Icon(
+                                                Icons
+                                                    .sentiment_very_dissatisfied_rounded,
+                                                size: 35,
+                                                color: AppColors.kAccentColor,
+                                              ),
+                                              Icon(
+                                                Icons
+                                                    .sentiment_very_dissatisfied_rounded,
+                                                size: 35,
+                                              ),
+                                            ]),
+                                          ),
                                         ),
                                       ],
                                     ),
-                                    IconButton(
-                                      icon: Icon(Icons.bookmark_border),
-                                      iconSize: 30.0,
-                                      onPressed: () => print('Save post'),
+                                  ),
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 10.0),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10.0),
+                                          child: OutlinedButton(
+                                            onPressed: null,
+                                            style: ButtonStyle(
+                                              shape: MaterialStateProperty.all(
+                                                  RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              30.0))),
+                                            ),
+                                            child: const Text("Comment"),
+                                          ),
+                                        ),
+                                        Text(
+                                          '80% Users Say 爆了!',
+                                          style: TextStyle(fontSize: 12),
+                                        )
+                                      ],
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),

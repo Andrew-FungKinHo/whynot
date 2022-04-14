@@ -8,6 +8,7 @@ import 'package:whynot/constants.dart';
 import 'package:whynot/pages/homepage.dart';
 import 'package:whynot/widgets/advice_tiles.dart';
 import 'package:whynot/widgets/calendar.dart';
+import 'package:whynot/widgets/glassmorphism.dart';
 
 const kTileHeight = 50.0;
 
@@ -190,7 +191,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
           // ),
           _processIndex == 1
               ? Padding(
-                  padding: const EdgeInsets.only(top: 200.0),
+                  padding: const EdgeInsets.only(top: 150.0),
                   child: Column(
                     // mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -324,7 +325,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                           ElevatedButton(
                             onPressed: () {},
                             child: Text(
-                              '😤 Frustrated',
+                              '😡 Anger',
                               style: TextStyle(
                                   fontSize: 25, color: AppColors.kAccentColor),
                             ),
@@ -342,7 +343,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                 )
               : _processIndex == 2
                   ? Padding(
-                      padding: const EdgeInsets.only(top: 200.0),
+                      padding: const EdgeInsets.only(top: 150.0),
                       child: Column(
                         children: [
                           Row(
@@ -373,7 +374,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                             children: [Text("And Follow-up is Key to Success")],
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 50,
                           ),
                           MyStatefulWidget(),
                         ],
@@ -381,7 +382,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                     )
                   : _processIndex == 3
                       ? Padding(
-                          padding: const EdgeInsets.only(top: 200.0),
+                          padding: const EdgeInsets.only(top: 150.0),
                           child: Column(
                             children: [
                               Row(
@@ -409,6 +410,32 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                                   )
                                 ],
                               ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              ListTile(
+                                leading: Icon(
+                                  Icons.build_rounded,
+                                  size: 30,
+                                ),
+                                title: Text('What solution did you try?'),
+                                subtitle: Text('Type Here ...'),
+                              ),
+                              ListTile(
+                                leading: Icon(
+                                  Icons.query_builder_rounded,
+                                  size: 30,
+                                ),
+                                title: Text('Any updates?'),
+                                subtitle: Text('Type Here ...'),
+                              ),
+                              ListTile(
+                                leading: Icon(
+                                  Icons.medical_services_rounded,
+                                  size: 30,
+                                ),
+                                title: Text('Is your problem solved?'),
+                              ),
 
                               SizedBox(
                                 height: 10,
@@ -432,7 +459,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                                 ],
                               ),
                               SizedBox(
-                                height: 75,
+                                height: 50,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -441,7 +468,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                                     "Congratulations!",
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 25,
+                                        fontSize: 22,
                                         color: AppColors.kAccentColor),
                                   ),
                                 ],
@@ -453,151 +480,346 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
                                     "We Are So Proud Of You.",
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 25,
+                                        fontSize: 22,
                                         color: AppColors.kAccentColor),
                                   ),
                                 ],
                               ),
 
                               SizedBox(
-                                height: 10,
+                                height: 50,
                               ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "How Are You Feeling Now?",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                        color: Colors.black),
-                                  ),
-                                ],
+
+                              Container(
+                                color: AppColors.kPrimaryColor,
+                                child: Column(
+                                  children: [
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "How Are You Feeling Now?",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15,
+                                              color: Colors.white),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Glassmorphism(
+                                              blur: 20,
+                                              opacity: 0.1,
+                                              radius: 10,
+                                              child: TextButton(
+                                                onPressed: () {
+                                                  // handle push to HomeScreen
+                                                },
+                                                child: Container(
+                                                  child: const Text(
+                                                    '☺️',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 25.0,
+                                                    ),
+                                                  ),
+                                                ),
+                                                style: ButtonStyle(
+                                                  padding:
+                                                      MaterialStateProperty.all(
+                                                          EdgeInsets.all(5)),
+                                                  shape:
+                                                      MaterialStateProperty.all<
+                                                          RoundedRectangleBorder>(
+                                                    RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              18.0),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                'Happiness',
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Glassmorphism(
+                                              blur: 20,
+                                              opacity: 0.1,
+                                              radius: 10,
+                                              child: TextButton(
+                                                onPressed: () {
+                                                  // handle push to HomeScreen
+                                                },
+                                                child: Container(
+                                                  child: const Text(
+                                                    '🤮',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 25.0,
+                                                    ),
+                                                  ),
+                                                ),
+                                                style: ButtonStyle(
+                                                  padding:
+                                                      MaterialStateProperty.all(
+                                                          EdgeInsets.all(5)),
+                                                  shape:
+                                                      MaterialStateProperty.all<
+                                                          RoundedRectangleBorder>(
+                                                    RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              18.0),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                'Disgust',
+                                                style: TextStyle(
+                                                    color: Colors.white),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Glassmorphism(
+                                              blur: 20,
+                                              opacity: 0.1,
+                                              radius: 10,
+                                              child: TextButton(
+                                                onPressed: () {
+                                                  // handle push to HomeScreen
+                                                },
+                                                child: Container(
+                                                  child: const Text(
+                                                    '😢',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 25.0,
+                                                    ),
+                                                  ),
+                                                ),
+                                                style: ButtonStyle(
+                                                  padding:
+                                                      MaterialStateProperty.all(
+                                                          EdgeInsets.all(5)),
+                                                  shape:
+                                                      MaterialStateProperty.all<
+                                                          RoundedRectangleBorder>(
+                                                    RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              18.0),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                'Sadness',
+                                                style: TextStyle(
+                                                    color: Colors.white),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Glassmorphism(
+                                              blur: 20,
+                                              opacity: 0.1,
+                                              radius: 10,
+                                              child: TextButton(
+                                                onPressed: () {
+                                                  // handle push to HomeScreen
+                                                },
+                                                child: Container(
+                                                  child: const Text(
+                                                    '😡',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 25.0,
+                                                    ),
+                                                  ),
+                                                ),
+                                                style: ButtonStyle(
+                                                  padding:
+                                                      MaterialStateProperty.all(
+                                                          EdgeInsets.all(5)),
+                                                  shape:
+                                                      MaterialStateProperty.all<
+                                                          RoundedRectangleBorder>(
+                                                    RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              18.0),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                'Anger',
+                                                style: TextStyle(
+                                                    color: Colors.white),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Glassmorphism(
+                                              blur: 20,
+                                              opacity: 0.1,
+                                              radius: 10,
+                                              child: TextButton(
+                                                onPressed: () {
+                                                  // handle push to HomeScreen
+                                                },
+                                                child: Container(
+                                                  child: const Text(
+                                                    '😣',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 25.0,
+                                                    ),
+                                                  ),
+                                                ),
+                                                style: ButtonStyle(
+                                                  padding:
+                                                      MaterialStateProperty.all(
+                                                          EdgeInsets.all(5)),
+                                                  shape:
+                                                      MaterialStateProperty.all<
+                                                          RoundedRectangleBorder>(
+                                                    RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              18.0),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                'Fear',
+                                                style: TextStyle(
+                                                    color: Colors.white),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Glassmorphism(
+                                              blur: 20,
+                                              opacity: 0.1,
+                                              radius: 10,
+                                              child: TextButton(
+                                                onPressed: () {
+                                                  // handle push to HomeScreen
+                                                },
+                                                child: Container(
+                                                  child: const Text(
+                                                    '😱',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 25.0,
+                                                    ),
+                                                  ),
+                                                ),
+                                                style: ButtonStyle(
+                                                  padding:
+                                                      MaterialStateProperty.all(
+                                                          EdgeInsets.all(5)),
+                                                  shape:
+                                                      MaterialStateProperty.all<
+                                                          RoundedRectangleBorder>(
+                                                    RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              18.0),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                'Surprise',
+                                                style: TextStyle(
+                                                    color: Colors.white),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  OutlinedButton(
-                                    onPressed: () {},
-                                    child: const Text(
-                                      'Happiness',
-                                      style: TextStyle(
-                                          fontSize: 11, color: Colors.amber),
-                                    ),
-                                    style: OutlinedButton.styleFrom(
-                                      fixedSize: const Size(100, 100),
-                                      shape: const CircleBorder(),
-                                      side: BorderSide(
-                                        width: 2.0,
-                                        color: Colors.amber,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  OutlinedButton(
-                                    onPressed: () {},
-                                    child: const Text(
-                                      'Disgust',
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          color:
-                                              Color.fromRGBO(117, 176, 156, 1)),
-                                    ),
-                                    style: OutlinedButton.styleFrom(
-                                      fixedSize: const Size(100, 100),
-                                      shape: const CircleBorder(),
-                                      side: BorderSide(
-                                        width: 2.0,
-                                        color: Color.fromRGBO(117, 176, 156, 1),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  OutlinedButton(
-                                    onPressed: () {},
-                                    child: const Text(
-                                      'Sadness',
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          color:
-                                              Color.fromRGBO(193, 150, 251, 1)),
-                                    ),
-                                    style: OutlinedButton.styleFrom(
-                                      fixedSize: const Size(100, 100),
-                                      shape: const CircleBorder(),
-                                      side: BorderSide(
-                                        width: 2.0,
-                                        color: Color.fromRGBO(193, 150, 251, 1),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  OutlinedButton(
-                                    onPressed: () {},
-                                    child: const Text(
-                                      'Anger',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          color:
-                                              Color.fromRGBO(249, 89, 124, 1)),
-                                    ),
-                                    style: OutlinedButton.styleFrom(
-                                      fixedSize: const Size(100, 100),
-                                      shape: const CircleBorder(),
-                                      side: BorderSide(
-                                        width: 2.0,
-                                        color: Color.fromRGBO(249, 89, 124, 1),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  OutlinedButton(
-                                    onPressed: () {},
-                                    child: const Text(
-                                      'Fear',
-                                      style: TextStyle(
-                                          fontSize: 25, color: Colors.black),
-                                    ),
-                                    style: OutlinedButton.styleFrom(
-                                      fixedSize: const Size(100, 100),
-                                      shape: const CircleBorder(),
-                                      side: BorderSide(
-                                          width: 2.0, color: Colors.black),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  OutlinedButton(
-                                    onPressed: () {},
-                                    child: const Text(
-                                      'Surprise',
-                                      style: TextStyle(fontSize: 16),
-                                    ),
-                                    style: OutlinedButton.styleFrom(
-                                      fixedSize: const Size(100, 100),
-                                      shape: const CircleBorder(),
-                                      side: BorderSide(
-                                          width: 2.0, color: Colors.blue),
-                                    ),
-                                  )
-                                ],
-                              )
 
                               // MyStatefulWidget(),
                             ],
@@ -621,7 +843,7 @@ class _ProcessTimelinePageState extends State<ProcessTimelinePage> {
             );
           }
         },
-        backgroundColor: completeColor,
+        backgroundColor: inProgressColor,
       ),
     );
   }
