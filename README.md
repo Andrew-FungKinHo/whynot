@@ -8,5 +8,5 @@ Homepage             |  Burst Stories
 :-------------------:|:-------------------------:
 ![Image of UI-1](https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/Homepage.png)  |  ![Image of UI-2](https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/Burst.png)
 
-How to create Complaint Bursts:
+## How to create Complaint Bursts:
 ![Burst Gif](https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/StoryCreation.gif)
