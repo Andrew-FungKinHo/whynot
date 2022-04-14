@@ -11,7 +11,7 @@ Our new platform called ‘Chihuahua’ provides flexibility to users in choosin
 - Revenue stream: freemium model (monthly subscription-based)  
 - Pricing: Chihuahua Personal Free($0), Chihuahua Personal Pro ($79/month), Chihuahua Enterprise ($179/month) 
 
-## Design and Implementation 
+## Design and Implementation (built with Figma <img alt="Figma" width="26px" src="https://camo.githubusercontent.com/a86a8278da4c5b5a43330e1ea28e6ba050007a837128b5dff5b35d5ff0f1248a/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f313630302f312a365867664443566e3831415958363858766432492d674032782e706e67"/> and Flutter <img  alt="Flutter" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png" />)
 
 UI/UX Design with Figma: https://www.figma.com/file/dQBUHLGU44t0XZyG5Vubr6/Whynot?node-id=0%3A1 <br>
 Figma Design Overview: ![Design](https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/allappScreens.png)
@@ -23,7 +23,7 @@ Homepage             |  Burst Stories            | Create Bursts
 ![Image of UI-1](https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/Homepage.png)  |  ![Image of UI-2](https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/Burst.png) | <img src="https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/StoryCreation.gif" width="1170" height="700"/>
 
 
- 
+
 ## How to Use 
 
 **Step 1:**
