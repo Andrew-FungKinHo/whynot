@@ -18,9 +18,9 @@ Figma Design Overview: ![Design](https://github.com/Andrew-FungKinHo/whynot/blob
 
 A quick look at our main interfaces for Chihuahua built with Flutter and Figma :
 
-Homepage             |  Burst Stories            | Create Bursts
-:-------------------:|:-------------------------:|:---------------------------------:
-![Image of UI-1](https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/Homepage.png)  |  ![Image of UI-2](https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/Burst.png) | <img src="https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/StoryCreation.gif" width="1170" height="700"/>
+Homepage             |  Burst Stories            | Create Bursts                     |
+:-------------------:|:-------------------------:|:---------------------------------:|
+![Image of UI-1](https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/Homepage.png)  |  ![Image of UI-2](https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/Burst.png) | <img src="https://github.com/Andrew-FungKinHo/whynot/blob/master/assets/images/StoryCreation.gif" width="300" height="600"/> | 
 
 
 
